@@ -1,1 +1,0 @@
-Rocky 9 install with NVIDIA CUDA 12.8 + latest NSight on top of NVIDIA GPU Drivers (v570.195.03)

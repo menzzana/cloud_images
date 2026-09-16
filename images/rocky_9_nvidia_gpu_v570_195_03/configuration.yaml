@@ -1,6 +1,0 @@
-general:
-  title: 'Rocky 9 NVIDIA GPU (v570.195.03) '
-  Category: XtraOld
-  image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud-NVGPU.570.195.03-1.1
-packages:
-- wget

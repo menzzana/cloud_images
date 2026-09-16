@@ -1,6 +1,6 @@
 general:
   title: Neko Dev (PDCLab v0.1.5)
-  Category: Personal
+  Category: Experimental
   image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud-Lab.1
   weblink: https://{{IP}}/
 users:

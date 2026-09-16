@@ -1,6 +1,6 @@
 general:
   title: Bioinformatics Course
-  Category: Personal
+  Category: Experimental
   image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
 packages:
 - wget

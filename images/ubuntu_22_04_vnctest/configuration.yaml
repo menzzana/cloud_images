@@ -1,6 +1,6 @@
 general:
   title: ubuntu-22.04-vncTest
-  Category: Personal
+  Category: Experimental
   image: Ubuntu-22.04-LTS-20250514-PDCCloud.1
   weblink: http://{{IP}}:8080
 packages:

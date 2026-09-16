@@ -1,6 +1,6 @@
 general:
   title: Bioinformatics Course2
-  Category: Personal
+  Category: Experimental
   image: Ubuntu-24.04-LTS-20260108-KCSCCloud.0
 packages:
 - wget

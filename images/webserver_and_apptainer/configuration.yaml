@@ -1,5 +1,5 @@
 general:
   title: Webserver and apptainer
-  Category: Personal
+  Category: Experimental
   image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
   weblink: http://{{IP}}
