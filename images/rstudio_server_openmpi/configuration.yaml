@@ -1,0 +1,22 @@
+general:
+  title: RStudio Server OpenMPI
+  Category: Personal
+  image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
+  weblink: http://{{IP}}:8787
+version: latest
+users:
+- username: REQUIRED
+  password: REQUIRED
+packages:
+- openmpi-bin
+- openmpi-common
+- openmpi-doc
+- libopenmpi-dev
+- libgsl27
+- libgsl-dev
+- pkg-config
+Rpackages:
+- pbdMPI
+- ks
+- MASS
+- VineCopula

@@ -1,0 +1,1 @@
+Test Image for VNC in the browser

@@ -1,0 +1,10 @@
+general:
+  title: RStudio Server (Rocky 9)
+  Category: Personal
+  image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud.1
+  weblink: http://{{IP}}:8787
+version: 2025.09.2-418
+users:
+- username: REQUIRED
+  password: REQUIRED
+Rpackages:

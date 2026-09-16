@@ -1,0 +1,1 @@
+Minimal Rocky 9 install with NVIDIA GPU Drivers (v570.195.03)

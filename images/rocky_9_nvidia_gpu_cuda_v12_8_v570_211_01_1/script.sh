@@ -1,0 +1,13 @@
+#!/bin/sh
+
+USER_PACKAGES={{packages}}
+
+
+# start with a more roomy root fs
+lvextend -r -L+16G /dev/rocky/lvroot
+
+# configure NVIDIA grid daemon for vGPU
+sed -e 's/^FeatureType=*./FeatureType=1/' -i /etc/nvidia/gridd.conf
+
+# install requested packages
+dnf install -y "${USER_PACKAGES[@]}"

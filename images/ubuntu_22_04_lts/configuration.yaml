@@ -1,0 +1,12 @@
+general:
+  title: Ubuntu 22.04 LTS
+  Category: Basic
+  image: Ubuntu-22.04-LTS-20260810-KCSCCloud.0
+packages:
+- wget
+- git
+- bash
+- gcc
+- gfortran
+- g++
+- make

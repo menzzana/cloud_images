@@ -1,0 +1,12 @@
+general:
+  title: UBUNTU 24.04 persistent storage
+  Category: Basic
+  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+packages:
+- wget
+- git
+- bash
+- gcc
+- gfortran
+- g++
+- make

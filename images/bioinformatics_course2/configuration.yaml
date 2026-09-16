@@ -1,0 +1,35 @@
+general:
+  title: Bioinformatics Course2
+  Category: Personal
+  image: Ubuntu-24.04-LTS-20260108-KCSCCloud.0
+packages:
+- wget
+- git
+- bash
+- gcc
+- gfortran
+- g++
+- make
+- nano
+- curl
+- python3
+- python3-venv
+- openjdk-17-jre-headless
+- rclone
+- jq
+- emboss
+- 7zip
+- python3-biopython
+- pymol
+- mmseqs2
+- clustalw
+- python3-pip
+pip:
+- seaborn
+- scikit-learn
+- pandas
+- numpy
+snap:
+- emacs --classic
+users:
+- arnee

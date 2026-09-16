@@ -1,0 +1,8 @@
+general:
+  title: VeloxChem Dev NVIDIA GPU (PDCLab v0.1.5)
+  Category: Chemistry
+  image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud-NVGPU.570.195.03-1.1
+  weblink: https://{{IP}}
+users:
+- username: REQUIRED
+  password: REQUIRED
