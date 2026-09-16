@@ -102,7 +102,7 @@ function configure_lab_user () {
     mkdir -p ${LAB_USER_HOME}/.jupyter
     
     # configure JupyterLab authentication
-    cat {{EOF >${LAB_USER_HOME}/.jupyter/jupyter_lab_config.py
+    cat <<EOF >${LAB_USER_HOME}/.jupyter/jupyter_lab_config.py
 c.ServerApp.password = '${PASSWORD_HASH}'
 c.ServerApp.allow_origin = '127.0.0.1'
 EOF
@@ -131,7 +131,7 @@ echo ${NEKO_LIB_DIR} >/etc/ld.so.conf.d/neko.conf && ldconfig
 # =================================================================
 
 mv /etc/httpd/conf.d/ssl.conf{,.dist}
-cat >/etc/httpd/conf.d/ssl.conf {{EOF
+cat >/etc/httpd/conf.d/ssl.conf <<EOF
 Listen 443 https
 
 SSLPassPhraseDialog exec:/usr/libexec/httpd-ssl-pass-dialog

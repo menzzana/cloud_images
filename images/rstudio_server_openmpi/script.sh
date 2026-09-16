@@ -77,7 +77,7 @@ WorkingDirectory=/home/rstudio
 WantedBy=multi-user.target' > /etc/systemd/system/rstudio-server.service
 
 # 2. Add a delay and restart after system boot
-cat {{EOF > /etc/systemd/system/rstudio-restart.service
+cat <<EOF > /etc/systemd/system/rstudio-restart.service
 [Unit]
 Description=Restart RStudio Server after network stabilization
 After=network-online.target

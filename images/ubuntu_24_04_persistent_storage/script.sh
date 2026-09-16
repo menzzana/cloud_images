@@ -20,7 +20,7 @@ MOUNT_DIR="/mnt/${CONTAINER_NAME}"
 
 # CREATE RCLONE CONFIG
 mkdir -p /root/.config/rclone
-cat > /root/.config/rclone/rclone.conf {{EOF
+cat > /root/.config/rclone/rclone.conf <<EOF
 [swift]
 type = swift
 auth = ${OS_AUTH_URL}
@@ -38,7 +38,7 @@ mkdir -p "${MOUNT_DIR}"
 # CREATE SYSTEMD SERVICE
 SERVICE_FILE="/etc/systemd/system/rclone-swift.service"
 
-cat > "${SERVICE_FILE}" {{EOF
+cat > "${SERVICE_FILE}" <<EOF
 [Unit]
 Description=Rclone mount for OpenStack Swift storage
 After=network-online.target

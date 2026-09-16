@@ -47,7 +47,7 @@ gdebi -n /tmp/rstudio-server.deb
 
 # Configure RStudio Server
 mkdir -p /etc/rstudio
-cat > /etc/rstudio/rserver.conf {{'EOF'
+cat > /etc/rstudio/rserver.conf <<'EOF'
 www-address=0.0.0.0
 www-port=8787
 EOF

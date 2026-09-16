@@ -18,7 +18,7 @@ nextflow -version
 
 # Set JAVA_HOME globally
 JAVA_PROFILE="/etc/profile.d/java17.sh"
-cat {{EOF > "$JAVA_PROFILE"
+cat <<EOF > "$JAVA_PROFILE"
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 export PATH=\$JAVA_HOME/bin:\$PATH
 EOF
@@ -36,7 +36,7 @@ deactivate
 
 # Create system-wide wrapper script for nf-core
 NFCORE_WRAPPER="/usr/local/bin/nf-core"
-cat {{EOF | tee "$NFCORE_WRAPPER" > /dev/null
+cat <<EOF | tee "$NFCORE_WRAPPER" > /dev/null
 #!/bin/bash
 source "$NFCORE_ENV_DIR/bin/activate"
 exec nf-core "\$@"
@@ -56,7 +56,7 @@ MOUNT_DIR="/mnt/${CONTAINER_NAME}"
 
 # CREATE RCLONE CONFIG
 mkdir -p /root/.config/rclone
-cat > /root/.config/rclone/rclone.conf {{EOF
+cat > /root/.config/rclone/rclone.conf <<EOF
 [swift]
 type = swift
 auth = ${OS_AUTH_URL}
@@ -74,7 +74,7 @@ mkdir -p "${MOUNT_DIR}"
 # CREATE SYSTEMD SERVICE
 SERVICE_FILE="/etc/systemd/system/rclone-swift.service"
 
-cat > "${SERVICE_FILE}" {{EOF
+cat > "${SERVICE_FILE}" <<EOF
 [Unit]
 Description=Rclone mount for OpenStack Swift storage
 After=network-online.target

@@ -20,7 +20,7 @@ PASSWORD_HASH=$(python3 -c "from jupyter_server.auth import passwd; print(passwd
 
 # Configure JupyterLab
 mkdir -p /home/ubuntu/.jupyter
-cat {{EOF > /home/ubuntu/.jupyter/jupyter_lab_config.py
+cat <<EOF > /home/ubuntu/.jupyter/jupyter_lab_config.py
 c.ServerApp.ip = '0.0.0.0'
 c.ServerApp.port = 8080
 c.ServerApp.open_browser = False
@@ -33,7 +33,7 @@ EOF
 chown -R ubuntu:ubuntu /home/ubuntu/.jupyter
 
 # Create a systemd service for JupyterLab
-cat {{EOF > /etc/systemd/system/jupyter.service
+cat <<EOF > /etc/systemd/system/jupyter.service
 [Unit]
 Description=Jupyter Lab for $USERNAME
 After=network.target

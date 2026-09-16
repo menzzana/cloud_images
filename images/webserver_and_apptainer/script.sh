@@ -58,7 +58,7 @@ echo "Setting up CGI directory permissions..."
 chmod 755 /usr/lib/cgi-bin/
 
 echo "Creating a test CGI script..."
-tee /usr/lib/cgi-bin/test.cgi > /dev/null {{'EOF'
+tee /usr/lib/cgi-bin/test.cgi > /dev/null <<'EOF'
 #!/bin/bash
 echo "Content-Type: text/html"
 echo ""
@@ -73,7 +73,7 @@ echo "Making test CGI script executable..."
 chmod +x /usr/lib/cgi-bin/test.cgi
 
 echo "Creating a simple HTML test page..."
-tee /var/www/html/index.html > /dev/null {{'EOF'
+tee /var/www/html/index.html > /dev/null <<'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -87,7 +87,7 @@ sed -e "s/^sessiondir max size = [0-9]\+/sessiondir max size = ${APPTAINER_SESSI
 
 # configure rclone for object storage
 mkdir -p /root/.config/rclone
-cat > /root/.config/rclone/rclone.conf {{EOF
+cat > /root/.config/rclone/rclone.conf <<EOF
 [swift]
 type = swift
 auth = ${OS_AUTH_URL}
@@ -121,7 +121,7 @@ function configure_lab_user () {
     mkdir -p ${LAB_USER_HOME}/.jupyter
     
     # configure JupyterLab authentication
-    cat {{EOF >${LAB_USER_HOME}/.jupyter/jupyter_lab_config.py
+    cat <<EOF >${LAB_USER_HOME}/.jupyter/jupyter_lab_config.py
 c.ServerApp.password = '${PASSWORD_HASH}'
 c.ServerApp.allow_origin = '127.0.0.1'
 EOF
@@ -140,7 +140,7 @@ configure_lab_user ${LAB_USERS[0]} ${LAB_PASSWORDS[0]}
 # create systemd service
 SERVICE_FILE="/etc/systemd/system/rclone-swift.service"
 
-cat > "${SERVICE_FILE}" {{EOF
+cat > "${SERVICE_FILE}" <<EOF
 [Unit]
 Description=Rclone mount for OpenStack Swift storage
 After=network-online.target
@@ -201,7 +201,7 @@ done
 # =================================================================
 
 mv /etc/httpd/conf.d/ssl.conf{,.dist}
-cat >/etc/httpd/conf.d/ssl.conf {{EOF
+cat >/etc/httpd/conf.d/ssl.conf <<EOF
 Listen 443 https
 
 SSLPassPhraseDialog exec:/usr/libexec/httpd-ssl-pass-dialog

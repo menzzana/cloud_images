@@ -14,7 +14,7 @@ MOUNT_DIR="/mnt/${CONTAINER_NAME}"
 
 # rclone configuration
 mkdir -p /root/.config/rclone
-cat > /root/.config/rclone/rclone.conf {{EOF
+cat > /root/.config/rclone/rclone.conf <<EOF
 [swift]
 type = swift
 auth = ${OS_AUTH_URL}
@@ -38,7 +38,7 @@ mkdir -p "${MOUNT_DIR}"
 # create systemd service
 SERVICE_FILE="/etc/systemd/system/rclone-swift.service"
 
-cat > "${SERVICE_FILE}" {{EOF
+cat > "${SERVICE_FILE}" <<EOF
 [Unit]
 Description=Rclone mount for OpenStack Swift storage
 After=network-online.target
@@ -72,11 +72,11 @@ systemctl start rclone-swift.service
 
 su - rocky -c "ln -s ${MOUNT_DIR} ~/${CONTAINER_NAME}"
 
-cat }}/etc/turbovncserver.conf {{EOF
+cat }}/etc/turbovncserver.conf <<EOF
 \$xstartup = "/opt/kcsc-cloud/etc/xstartup";
 EOF
 
-cat >/opt/kcsc-cloud/etc/xstartup {{EOF
+cat >/opt/kcsc-cloud/etc/xstartup <<EOF
 dbus-launch xfce4-session
 EOF
 

@@ -25,7 +25,7 @@ echo "$VNC_PASSWORD" | sudo -u $VNC_USER vncpasswd -f > /home/$VNC_USER/.vnc/pas
 chmod 600 /home/$VNC_USER/.vnc/passwd
 chown $VNC_USER:$VNC_USER /home/$VNC_USER/.vnc/passwd
 # Create VNC startup script
-cat > /home/$VNC_USER/.vnc/xstartup {{ 'EOF'
+cat > /home/$VNC_USER/.vnc/xstartup << 'EOF'
 #!/bin/bash
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
@@ -34,7 +34,7 @@ EOF
 chmod +x /home/$VNC_USER/.vnc/xstartup
 chown $VNC_USER:$VNC_USER /home/$VNC_USER/.vnc/xstartup
 # Create systemd service for VNC
-cat > /etc/systemd/system/vncserver@.service {{ EOF
+cat > /etc/systemd/system/vncserver@.service << EOF
 [Unit]
 Description=TightVNC server for display %i
 After=syslog.target network.target
@@ -49,7 +49,7 @@ ExecStop=/usr/bin/vncserver -kill :%i
 #WantedBy=multi-user.target
 EOF
 # Create systemd service for noVNC
-cat > /etc/systemd/system/novnc.service {{ EOF
+cat > /etc/systemd/system/novnc.service << EOF
 [Unit]
 Description=noVNC WebSocket Proxy
 After=network.target vncserver@1.service
@@ -68,7 +68,7 @@ systemctl start vncserver@1.service
 systemctl enable novnc.service
 systemctl start novnc.service
 # Create a landing page
-cat > /usr/share/novnc/index.html {{ 'EOF'
+cat > /usr/share/novnc/index.html << 'EOF'
 <!DOCTYPE html>
 <html>
 <head>

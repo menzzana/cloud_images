@@ -53,7 +53,7 @@ docker run -d \
 
 # Create startup script for IP updates (runs on boot)
 STARTUP_SCRIPT=/opt/hedgedoc-ip-update.sh
-cat > $STARTUP_SCRIPT {{ 'EOF'
+cat > $STARTUP_SCRIPT << 'EOF'
 #!/bin/bash
 
 echo "Waiting for Docker daemon..."
@@ -143,7 +143,7 @@ chmod +x $STARTUP_SCRIPT
 
 # Create systemd service for IP updates
 SERVICE_FILE=/etc/systemd/system/hedgedoc-ip-update.service
-cat > $SERVICE_FILE {{ EOF
+cat > $SERVICE_FILE << EOF
 [Unit]
 Description=HedgeDoc IP Update Service
 After=network-online.target docker.service systemd-resolved.service
