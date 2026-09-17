@@ -1,6 +1,6 @@
 general:
   title: Ubuntu 22.04 LTS
-  Category: Basic
+  category: Basic
   image: Ubuntu-22.04-LTS-20260810-KCSCCloud.0
 packages:
 - wget

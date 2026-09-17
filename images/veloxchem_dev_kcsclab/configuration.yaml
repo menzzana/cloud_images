@@ -1,6 +1,6 @@
 general:
   title: VeloxChem Dev (KCSCLab)
-  Category: Chemistry
+  category: Chemistry
   image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-Lab.0
   weblink: https://{{IP}}/
 users:

@@ -1,6 +1,6 @@
 general:
   title: RStudio Server Basic
-  Category: Mathematics
+  category: Mathematics
   image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
   weblink: http://{{IP}}:8787
 version: 2025.09.2-418

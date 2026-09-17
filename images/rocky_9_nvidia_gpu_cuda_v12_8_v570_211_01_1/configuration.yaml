@@ -1,6 +1,6 @@
 general:
   title: Rocky 9 NVIDIA GPU CUDA (v12.8/v570.211.01-1)
-  Category: Basic
+  category: Basic
   image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-NVGPU-CUDA.12.8.570.211.01-1.0
 packages:
 - wget
