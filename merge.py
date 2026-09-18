@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+#-----------------------------------------------------------------------
+import yaml
+import os
+#-----------------------------------------------------------------------
+IMAGES="images"
+CONFIGURATION="configuration.yaml"
+CATALOG="catalog.yaml"
+#-----------------------------------------------------------------------
+catalog={}
+for dir in os.listdir(IMAGES):
+    with open(os.path.join(IMAGES, dir,CONFIGURATION)) as fp:
+        cfg = yaml.safe_load(fp)
+    catalog[os.path.join(IMAGES, dir)] = cfg["general"]
+with open(CATALOG, "w") as fp:
+    yaml.dump(catalog, fp, sort_keys=False)
+#-----------------------------------------------------------------------
