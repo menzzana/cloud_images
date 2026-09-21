@@ -21,7 +21,13 @@ for dir in os.listdir(IMAGES):
         "dir": dir,
         **general
         })
-    #catalog[os.path.join(IMAGES, dir)] = cfg["general"]
+    catalog = {
+        category: sorted(
+            entries,
+            key=lambda x: x["title"].lower()
+            )
+        for category, entries in sorted(catalog.items())
+        }
 with open(CATALOG, "w") as fp:
     yaml.dump(catalog, fp, sort_keys=False)
 #-----------------------------------------------------------------------
