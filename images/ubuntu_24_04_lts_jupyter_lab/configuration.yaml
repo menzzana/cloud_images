@@ -1,6 +1,6 @@
 general:
   title: Ubuntu 24.04 LTS Jupyter Lab
   category: Basic
-  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
   weblink: http://{{IP}}:8080
 password: REQUIRED

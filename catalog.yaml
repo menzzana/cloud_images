@@ -1,113 +1,113 @@
 Basic:
 - dir: rhel_9_8
   title: 'RHEL 9.8 '
-  image: rhel-9-x86_64-20260813-1136.KCSCCloud.0
+  base_image: rhel-9-x86_64-20260813-1136.KCSCCloud.0
 - dir: rocky_9
   title: Rocky 9
-  image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud.1
+  base_image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud.1
 - dir: rocky_9_hpc
   title: Rocky 9 HPC
-  image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud.1
+  base_image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud.1
 - dir: rocky_9_kcsclab
   title: Rocky 9 KCSCLab
-  image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-Lab.0
+  base_image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-Lab.0
   weblink: https://{{IP}}/
 - dir: rocky_9_minimal
   title: Rocky 9 Minimal
-  image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud.1
+  base_image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud.1
 - dir: rocky_9_nvidia_gpu_v570_211_01_1
   title: Rocky 9 NVIDIA GPU (v570.211.01-1)
-  image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-NVGPU.570.211.01-1.0
+  base_image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-NVGPU.570.211.01-1.0
 - dir: rocky_9_nvidia_gpu_cuda_v12_8_v570_211_01_1
   title: Rocky 9 NVIDIA GPU CUDA (v12.8/v570.211.01-1)
-  image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-NVGPU-CUDA.12.8.570.211.01-1.0
+  base_image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-NVGPU-CUDA.12.8.570.211.01-1.0
 - dir: rocky_9_x11
   title: Rocky 9 X11
-  image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-X11.1
+  base_image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-X11.1
 - dir: ubuntu_22_04_lts
   title: Ubuntu 22.04 LTS
-  image: Ubuntu-22.04-LTS-20260810-KCSCCloud.0
+  base_image: Ubuntu-22.04-LTS-20260810-KCSCCloud.0
 - dir: ubuntu_24_04_lts
   title: Ubuntu 24.04 LTS
-  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
 - dir: ubuntu_24_04_lts_apptainer
   title: Ubuntu 24.04 LTS Apptainer
-  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
 - dir: ubuntu_24_04_lts_jupyter_lab
   title: Ubuntu 24.04 LTS Jupyter Lab
-  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
   weblink: http://{{IP}}:8080
 - dir: ubuntu_24_04_persistent_storage
   title: UBUNTU 24.04 persistent storage
-  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
 Bioinformatics:
 - dir: nextflow_nf_core
   title: NextFlow+nf-core
-  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
 Chemistry:
 - dir: gromacs
   title: GROMACS
-  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
 - dir: veloxchem_dev_kcsclab
   title: VeloxChem Dev (KCSCLab)
-  image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-Lab.0
+  base_image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-Lab.0
   weblink: https://{{IP}}/
 - dir: veloxchem_dev_nvidia_gpu_pdclab_v0_1_5
   title: VeloxChem Dev NVIDIA GPU (PDCLab v0.1.5)
-  image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud-NVGPU.570.195.03-1.1
+  base_image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud-NVGPU.570.195.03-1.1
   weblink: https://{{IP}}
 Experimental:
 - dir: bioinformatics_course
   title: Bioinformatics Course
-  image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
+  base_image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
 - dir: bioinformatics_course2
   title: Bioinformatics Course2
-  image: Ubuntu-24.04-LTS-20260108-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260108-KCSCCloud.0
 - dir: freebsd_15_zfs
   title: FreeBSD 15 ZFS
-  image: FreeBSD-15.0-RELEASE-amd64-BASIC-CLOUDINIT-zfs-KCSCCloud.0
+  base_image: FreeBSD-15.0-RELEASE-amd64-BASIC-CLOUDINIT-zfs-KCSCCloud.0
 - dir: gte_notebook_image
   title: GTE-Notebook-Image
-  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
   weblink: http://{{IP}}/hub/login
 - dir: neko_dev_pdclab_v0_1_5
   title: Neko Dev (PDCLab v0.1.5)
-  image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud-Lab.1
+  base_image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud-Lab.1
   weblink: https://{{IP}}/
 - dir: rocky_9_kcsclab_overlay
   title: Rocky 9 KCSCLab Overlay
-  image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud-Lab.1
+  base_image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud-Lab.1
   weblink: https://{{IP}}/
 - dir: rstudio_server_rocky_9
   title: RStudio Server (Rocky 9)
-  image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud.1
+  base_image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud.1
   weblink: http://{{IP}}:8787
 - dir: rstudio_server_openmpi
   title: RStudio Server OpenMPI
-  image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
+  base_image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
   weblink: http://{{IP}}:8787
 - dir: ubuntu_24_04_lts_with_openmpi_and_rscript
   title: Ubuntu 24.04 LTS with OpenMPI and Rscript
-  image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
+  base_image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
 - dir: ubuntu_desktop
   title: UBUNTU Desktop
-  image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
+  base_image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
   weblink: http://{{IP}}:8080
 - dir: ubuntu_22_04_vnctest
   title: ubuntu-22.04-vncTest
-  image: Ubuntu-22.04-LTS-20250514-PDCCloud.1
+  base_image: Ubuntu-22.04-LTS-20250514-PDCCloud.1
   weblink: http://{{IP}}:8080
 - dir: webserver_and_apptainer
   title: Webserver and apptainer
-  image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
+  base_image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
   weblink: http://{{IP}}
 Mathematics:
 - dir: rstudio_server_basic
   title: RStudio Server Basic
-  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
   weblink: http://{{IP}}:8787
 Productivity:
 - dir: hedgedoc
   title: HedgeDoc
-  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
   weblink: http://{{IP}}:8080

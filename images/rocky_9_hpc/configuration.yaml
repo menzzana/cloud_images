@@ -1,7 +1,7 @@
 general:
   title: Rocky 9 HPC
   category: Basic
-  image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud.1
+  base_image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud.1
 packages:
 - wget
 - git

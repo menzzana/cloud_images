@@ -1,4 +1,4 @@
 general:
   title: FreeBSD 15 ZFS
   category: Experimental
-  image: FreeBSD-15.0-RELEASE-amd64-BASIC-CLOUDINIT-zfs-KCSCCloud.0
+  base_image: FreeBSD-15.0-RELEASE-amd64-BASIC-CLOUDINIT-zfs-KCSCCloud.0

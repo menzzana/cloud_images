@@ -1,7 +1,7 @@
 general:
   title: GTE-Notebook-Image
   category: Experimental
-  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
   weblink: http://{{IP}}/hub/login
 admin_user: <KTH_USERNAME>
 hostname: ''

@@ -1,7 +1,7 @@
 general:
   title: Rocky 9 X11
   category: Basic
-  image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-X11.1
+  base_image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-X11.1
 packages:
 - wget
 - git

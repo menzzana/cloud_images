@@ -1,4 +1,4 @@
 general:
   title: NextFlow+nf-core
   category: Bioinformatics
-  image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0
+  base_image: Ubuntu-24.04-LTS-20260801-KCSCCloud.0

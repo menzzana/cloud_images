@@ -1,7 +1,7 @@
 general:
   title: Rocky 9 KCSCLab Overlay
   category: Experimental
-  image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud-Lab.1
+  base_image: Rocky-9-LVM-9.7-20251123.2.KCSCCloud-Lab.1
   weblink: https://{{IP}}/
 users:
 - username: REQUIRED

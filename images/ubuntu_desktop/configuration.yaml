@@ -1,7 +1,7 @@
 general:
   title: UBUNTU Desktop
   category: Experimental
-  image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
+  base_image: Ubuntu-24.04-LTS-20250313-PDCCloud.1
   weblink: http://{{IP}}:8080
 packages:
 password: REQUIRED

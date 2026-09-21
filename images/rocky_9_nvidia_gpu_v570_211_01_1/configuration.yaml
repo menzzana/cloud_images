@@ -1,6 +1,6 @@
 general:
   title: 'Rocky 9 NVIDIA GPU (v570.211.01-1)'
   category: Basic
-  image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-NVGPU.570.211.01-1.0
+  base_image: Rocky-9-LVM-9.8-20260525.0.KCSCCloud-NVGPU.570.211.01-1.0
 packages:
 - wget

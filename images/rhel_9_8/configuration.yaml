@@ -1,4 +1,4 @@
 general:
   title: 'RHEL 9.8 '
   category: Basic
-  image: rhel-9-x86_64-20260813-1136.KCSCCloud.0
+  base_image: rhel-9-x86_64-20260813-1136.KCSCCloud.0
