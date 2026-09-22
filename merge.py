@@ -12,10 +12,14 @@ for dir in os.listdir(IMAGES):
     with open(os.path.join(IMAGES, dir,CONFIGURATION)) as fp:
         cfg = yaml.safe_load(fp)
     general = cfg["general"]
-    category=cfg["general"]["category"]
+    category=cfg["general"]["category"].capitalize()
     if category not in catalog:
         catalog[category]=[]
     del cfg["general"]["category"]
+    general = {
+        k.lower(): v
+        for k, v in cfg["general"].items()
+        }
     cfg={os.path.join(IMAGES, dir,CONFIGURATION):cfg}
     catalog[category].append({
         "dir": dir,
