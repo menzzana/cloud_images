@@ -1,1 +1,79 @@
-Startup scripts, configuration and documentation directly related to build VMs within Cloud
+Startup scripts, configuration and documentation directly related to build VMs within Cloud.
+Every image information must be written within its on folder in *images*.
+The name of the folder also acts as an ID within the Cloud portal.
+
+# Dependency
+Upon updating the repository the file *catalog.yaml* is written to
+give an overview of the current images.
+In order to achieve this you need to be able to run python 
+as well as a couple of python dependencies
+
+* os
+* yaml
+
+# How to create a new image
+
+There are 3 types of files
+
+## Documentation.md 
+Contains information in markdown on how to use the image
+
+## script.sh 
+Contains the script that should be executed on creation.
+Within each script there are variables that are set using values from the *configuration.yaml* file
+
+### Will substitute {{version}} to VERSION
+Example in configuration.yaml
+```
+version: VERSION
+```
+### Will substitute {{packages}} to an array of packages
+Example in configuration.yaml
+```
+packages:
+  - PACKAGE1
+  - PACKAGE2
+  - PACKAGE3 
+```
+### Will substitute {{users.username}} to an array of usernames, and {{users.password}} to an array of passwords.
+BUT also in this case first entry is mandatory and must be set by the user.
+
+Example in configuration.yaml
+```
+users:
+  - username: REQUIRED
+    password: REQUIRED
+  - username: USER2
+    password: PASS2
+``` 
+
+### Global parameters
+
+Besides these user defined parameters, there are also a set of global parameters
+that can be added to the user script, but their value is set within the portal and should not be user defined.
+At the moment these can be set using {{PARAMETER}}
+and currently these values can be added...
+
+- project_data
+- project_name
+- cred_id
+- cred_secret
+- cloud_domain
+- project_domain
+- cloud_url
+
+These do not exist in the configuration.yaml file but are global.
+
+## configuration.yaml
+General and specific information about the image
+
+Example of mandatory configuration information. This must reside in every configuration file
+
+```
+general:
+  title: [TITLE]
+  category: [CATEGORY]
+  base_image: [BASE IMAGE NAME FROM OpenStack]
+```
+
+The rest of the configuration file can be filled with configuration for the specific image.
